@@ -19,17 +19,17 @@
         <h3>Agregar producto</h3>
         <form>
             <label for="code">Código: </label>
-            <input id="code" type="number">
+            <input id="code" type="number" value="1" disabled>
             <label for="name">Nombre: </label>
-            <input id="name" type="text">
+            <input id="name" type="text" value="Producto 1">
             <label for="cost">Precio: </label>
-            <input id="cost" type="number">
+            <input id="cost" type="number" value="1000">
             <label for="stock">Cantidad: </label>
-            <input id="stock" type="number">
+            <input id="stock" type="number" value="5">
             <label for="description">Descripción: </label>
-            <input id="description" type="text">
+            <input id="description" type="text" value="Alguna descripción 1">
             <label for="position">Posición: </label>
-            <input id="position" type="number">
+            <input id="position" type="number" min="1">
             <button id="btnAdd" type="button">Agregar</button>
         </form>
         <!--Query product-->
@@ -44,7 +44,7 @@
         <form>
             <label for="deleteByCode">Código: </label>
             <input id="deleteByCode" type="number">
-            <button id="btnDelete" type="button">Buscar</button>
+            <button id="btnDelete" type="button">Eliminar</button>
         </form>
         <br>
         <!--Create report-->
@@ -52,11 +52,12 @@
             <button id="btnCreateReport">Generar reporte</button>
         </div>
     </section>
+    <!--Aside-->
     <aside>
         <h2>Reporte</h2>
         <article id="articleReport"></article>
     </aside>
 </body>
-<script src="main.js" type="module"></script>
+<script src="./main.js" type="module"></script>
 
 </html>

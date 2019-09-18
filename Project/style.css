@@ -60,7 +60,7 @@ button:hover{
 /*********************************************************************************************/
 aside{
     width: 30%;
-    height: auto;
+    height: 200px;
     background-color: gray;
     display: inline-block;
     text-align: justify;

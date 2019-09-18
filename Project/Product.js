@@ -7,17 +7,11 @@ export default class Product{
         this._description = description;
     }
 
+    get code(){
+        return this._code;
+    }
+
     toString(){
-        return '*Código: ' + this._code + '//Nombre: ' + this._name + '//Precio' + this._cost + '//Cantidad: ' + this._stock + 'Descripción: ' + this._description + '*'
+        return 'Código: ' + this._code + 'Nombre: ' + this._name + 'Precio: $' + this._cost + 'Cantidad: ' + this._stock + 'Descripción: ' + this._description;
     }
 }
-
-/*
-ARTICULO
-codigo
-nombre
-precio
-cantidad
-descripcion
-toString();
-*/
