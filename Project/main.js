@@ -2,7 +2,6 @@ import Structure from "./Structure.js";
 
 var inventory = new Structure(new Array(), document.querySelector('#articleReport'));
 
-
 //Button Add
 document.querySelector('#btnAdd').addEventListener('click', () => {
     let position = document.querySelector('#position').value;
@@ -16,7 +15,8 @@ document.querySelector('#btnAdd').addEventListener('click', () => {
 });
 //Button query
 document.querySelector('#btnQuery').addEventListener('click', () => {
-    inventory.query(document.querySelector('#queryByCode').value);
+    let product = inventory.query(document.querySelector('#queryByCode').value);
+    document.querySelector('#productFound').innerHTML = product;
 });
 //Button delete
 document.querySelector('#btnDelete').addEventListener('click', () => {

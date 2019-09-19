@@ -12,6 +12,6 @@ export default class Product{
     }
 
     toString(){
-        return 'Código: ' + this._code + 'Nombre: ' + this._name + 'Precio: $' + this._cost + 'Cantidad: ' + this._stock + 'Descripción: ' + this._description;
+        return '////Código: ' + this._code + '***Nombre: ' + this._name + '***Precio: $' + this._cost + '***Cantidad: ' + this._stock + '***Descripción: ' + this._description + '////';
     }
 }

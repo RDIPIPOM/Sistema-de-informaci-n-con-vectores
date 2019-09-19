@@ -18,10 +18,9 @@ h1{
 }
 /*********************************************************************************************/
 section{
-    width: 69%;
+    width: 100%;
     height: auto;
     background-color: white;
-    display: inline-block;
     text-align: justify;
     padding: 10px 15px 10px 15px;
 }
@@ -59,13 +58,12 @@ button:hover{
 }
 /*********************************************************************************************/
 aside{
-    width: 30%;
+    width: 100%;
     height: 200px;
     background-color: gray;
-    display: inline-block;
     text-align: justify;
     padding: 10px 15px 10px 15px;
-    overflow: scroll;
+    text-align: center;
 }
 
 article{

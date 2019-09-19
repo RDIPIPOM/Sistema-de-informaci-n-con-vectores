@@ -19,19 +19,33 @@ export default class Structure {
         if (position === '' || position === (this._structure.length + 1).toString()) {
             this._structure.push(new Product(this._counterID, name, cost, stock, description));
             this._counterID++;
+            alert('Producto agregado correctamente');
         } else if (parseInt(position) > 0 && parseInt(position) < this._structure.length) {
-            //Copy the last to the last + 1
             for (let i = this._structure.length; i >= parseInt(position); i--) {
                 this._structure[i] = this._structure[i - 1];
             }
             this._structure[parseInt(position) - 1] = new Product(this._counterID, name, cost, stock, description);
             this._counterID++;
+            alert('Producto agregado correctamente');
         } else
             alert('Posicion no válida');
     }
 
     query(code) {
+        code = parseInt(code);
+        let productFound = '';
+        if (this._isCodeExist(code)) {
+            this._structure.forEach(product => {
+                if (product.code === code) {
+                    productFound = product;
+                    return;
+                }
+            });
+        } else {
+            alert('No se ha podido encontrar el producto');
+        }
 
+        return productFound;
     }
 
     delete(code) {
@@ -44,6 +58,7 @@ export default class Structure {
                 this._structure.pop();
             } else
                 this._structure.pop();
+            alert('Se ha eliminado el producto correctamente');
         } else {
             alert('El código ingresado no existe, por favor verifique de nuevo');
         }
